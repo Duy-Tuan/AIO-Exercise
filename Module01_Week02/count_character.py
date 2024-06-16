@@ -20,12 +20,7 @@ def count_chars(string: str) -> dict:
 
     return char_frequency
 
-if __name__ == "__main__":
-    # string = "Happiness"
-    # print(count_chars(string))
-    #
-    # string = "smiles"
-    # print(count_chars(string))
 
+if __name__ == "__main__":
     assert count_chars("Baby") == {"B": 1, "a": 1, "b": 1, "y": 1}
     print(count_chars("smiles"))

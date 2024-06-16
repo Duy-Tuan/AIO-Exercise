@@ -1,4 +1,4 @@
-def check_the_number(N):
+def check_the_number(n):
     """
     Check if an input number is in the list of numbers from 1 to 4.
 
@@ -11,13 +11,13 @@ def check_the_number(N):
         "True" if the number is in the list [1, 2, 3, 4], otherwise "False".
     """
     list_of_numbers = []
-    result = ""
+    results = ""
     for i in range(1, 5):
         list_of_numbers.append(i)
 
-    if N in list_of_numbers:
+    if n in list_of_numbers:
         results = "True"
-    if N not in list_of_numbers:
+    if n not in list_of_numbers:
         results = "False"
 
     return results

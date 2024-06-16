@@ -14,7 +14,7 @@ if __name__ == "__main__":
     my_list = [5, 2, 5, 0, 1]
     max = 1
     min = 0
-    assert  my_function(max=max, min=min, data=my_list) == [1, 1, 1, 0, 1]
+    assert my_function(max=max, min=min, data=my_list) == [1, 1, 1, 0, 1]
 
     my_list = [10, 2, 5, 0, 1]
     max = 2

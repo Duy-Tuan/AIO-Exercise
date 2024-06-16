@@ -68,5 +68,5 @@ if __name__ == "__main__":
     print(levenshtein_distance(source, target))
 
     # Exercise 4
-    assert levenshtein_distance("hi", "hello") == 4.0
+    assert levenshtein_distance("hi", "hello") == 4
     print(levenshtein_distance("hola", "hello"))

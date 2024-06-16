@@ -25,15 +25,13 @@ def word_count(file_path: str) -> dict:
         # Statistic words
         for word in words:
             word_lowercase = word.lower()
-            word_frequency[word_lowercase] = word_frequency.get(word_lowercase, 0) + 1
+            word_frequency[word_lowercase] = word_frequency.get(
+                word_lowercase, 0) + 1
 
     return word_frequency
 
 
 if __name__ == "__main__":
-    # file_path = "./P1_data.txt"
-    # print(word_count(file_path))
-
     # Exercise 3
     file_path = "./P1_data.txt"
     result = word_count(file_path)
