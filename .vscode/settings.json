@@ -2,5 +2,8 @@
     "sonarlint.connectedMode.project": {
         "connectionId": "duy-tuan",
         "projectKey": "Duy-Tuan_AIO-Exercise"
-    }
+    },
+    "python.analysis.extraPaths": [
+        "./Module01/ImageProject_HelmetSafetyDetection/yolov10"
+    ]
 }
