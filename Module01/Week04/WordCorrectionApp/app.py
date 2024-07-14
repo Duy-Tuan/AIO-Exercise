@@ -1,5 +1,5 @@
 import streamlit as st
-from lenvenshtein_distance import levenshtein_distance
+from lenvenshtein_distance import cal_levenshtein_distance
 
 
 def load_vocab(file_path):
@@ -20,7 +20,7 @@ def main():
     if st.button("Compute"):
         leven_distances = dict()
         for vocab in vocabs:
-            leven_distances[vocab] = levenshtein_distance(word, vocab)
+            leven_distances[vocab] = cal_levenshtein_distance(word, vocab)
 
         sorted_distances = dict(
             sorted(leven_distances.items(), key=lambda item: item[1]))

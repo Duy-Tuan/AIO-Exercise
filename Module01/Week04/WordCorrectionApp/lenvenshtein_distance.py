@@ -1,32 +1,4 @@
-def levenshtein_distance(source: str, target: str) -> int:
-    """
-    Computes the Levenshtein distance between two strings.
-
-    The Levenshtein distance is a measure of the difference between two sequences.
-    It is the minimum number of single-character edits (insertions, deletions, or substitutions)
-    required to change one string into the other.
-
-    Args:
-        source (str): The source string to compare.
-        target (str): The target string to compare against the source.
-
-    Returns:
-        int: The Levenshtein distance between the source and target strings. This value
-        represents the minimum number of single-character edits needed to transform
-        the source string into the target string.
-
-    Algorithm:
-        1. Prepend a '#' character to both strings to handle edge cases.
-        2. Initialize a matrix with the number of rows equal to the length of the source
-           and the number of columns equal to the length of the target.
-        3. Set the first row and first column of the matrix with incremental values starting
-           from 0 up to the length of the corresponding string.
-        4. Iterate over each character in both strings, compute the edit values, and update
-           the matrix with the minimum edit distance at each step.
-        5. The value in the bottom-right cell of the matrix represents the Levenshtein distance
-           between the two strings.
-    """
-
+def cal_levenshtein_distance(source: str, target: str) -> int:
     source = "#" + source
     target = "#" + target
     rows = len(source)
@@ -60,9 +32,3 @@ def levenshtein_distance(source: str, target: str) -> int:
             matrix[r][c] = min_value
 
     return matrix[rows - 1][cols - 1]
-
-
-if __name__ == "__main__":
-    source = "elmets"
-    target = "elements"
-    print(levenshtein_distance(source, target))
